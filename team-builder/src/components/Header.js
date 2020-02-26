@@ -4,7 +4,7 @@ import './Header.css';
 const Header = () => {
     return (
         <header>
-            <h1>the bonzai collective</h1>
+            <h1>the morse collective</h1>
         </header>
     )
 }
