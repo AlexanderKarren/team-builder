@@ -13,3 +13,7 @@
     flex-direction:column;
     align-items:center;
 }
+
+.member-card .information button {
+    margin-top:10px;
+}

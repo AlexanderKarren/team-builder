@@ -28,6 +28,7 @@ function App() {
       svgSrc: "man.svg",
     },
   ])
+  const [memberToEdit, updateMemberToEdit] = useState();
 
   const addHacker = hacker => {
     const newHacker = {
@@ -37,17 +38,29 @@ function App() {
       joined: hacker.joined,
       svgSrc: "man.svg",
     }
-    updateTeam([...teamMembers, newHacker])
+    updateTeam([...teamMembers, newHacker]);
   }
+
+  const editHacker = edittedHacker => {
+    console.log(edittedHacker);
+    let temp = teamMembers;
+    temp[edittedHacker.id - 1].psuedonym = edittedHacker.psuedonym;
+    temp[edittedHacker.id - 1].specialty = edittedHacker.specialty;
+    temp[edittedHacker.id - 1].joined = edittedHacker.joined;
+    updateTeam(temp);
+    console.log(teamMembers);
+  }
+
+  console.log(teamMembers);
 
   return (
     <div className="App">
       <Header />
-      <Form addHacker={addHacker}/>
+      <Form memberToEdit={memberToEdit} updateMemberToEdit={updateMemberToEdit} addHacker={addHacker} editHacker={editHacker}/>
       <section className="card-container">
         {teamMembers.map(member => {
           return (
-            <MemberCard member={member}/>
+            <MemberCard member={member} updateMember={updateMemberToEdit}/>
           )
         })}
       </section>

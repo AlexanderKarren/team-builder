@@ -3,6 +3,11 @@ import { ReactSVG } from 'react-svg';
 import './MemberCard.css';
 
 const MemberCard = (props) => {
+
+    const updateMember = () => {
+        props.updateMember(props.member)
+    }
+
     return (
         <div className="member-card">
             <div className="avi">
@@ -18,6 +23,7 @@ const MemberCard = (props) => {
                     <span>Joined:&nbsp;</span>
                     <span>{props.member.joined}</span>
                 </div>
+                <button onClick={updateMember}>Edit</button>
             </div>
         </div>
     )

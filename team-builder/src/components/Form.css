@@ -35,17 +35,7 @@ div.form-container > div > form {
 }
 
 .form-container form button {
-    padding:5px;
     width:100%;
-    color:inherit;
-    font-size:inherit;
-    font-family:inherit;
-    background-color:#2F4F4F;
-}
-
-.form-container form button:hover {
-    cursor:pointer;
-    background-color:black;
 }
 
 .form-container form input {
