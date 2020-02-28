@@ -1,0 +1,49 @@
+div.form-container {
+    display:flex;
+    justify-content:center;
+    background-color:black;
+    padding:10px;
+    width:100%;
+}
+
+div.form-container > div {
+    width:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+
+div.form-container > div > form {
+    width:50%;
+}
+
+.form-container form > div {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:nowrap;
+    margin:10px 0;
+}
+
+.form-container form > div > input {
+    width:70%;
+}
+
+.form-container form > div > label {
+    width:30%;
+}
+
+.form-container form button {
+    width:100%;
+}
+
+.form-container form input {
+    outline:none;
+    padding:5px;
+    font-family:inherit;
+    color:inherit;
+    font-size:inherit;
+    background-color:#2F4F4F;
+    border:0;
+}
